@@ -103,4 +103,4 @@ plt.legend()
 # save to a file
 plt.savefig('plot.png')
 s3_client = boto3.client('s3')
-s3_client.upload_file('plot.png', 'kpi-lab4', 'plot.png')
+s3_client.upload_file('plot.png', 'clouds-lab4', 'plot.png')
