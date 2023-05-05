@@ -56,15 +56,15 @@ def upload_(file_name, bucket, object_name=None):#завантаження на 
         return False
     return True
 
-upload_('data.csv', 'kpi-lab4')
-upload_('euro.csv', 'kpi-lab4')
-upload_('dollar.csv', 'kpi-lab4')
+upload_('data.csv', 'clouds-lab4')
+upload_('euro.csv', 'clouds-lab4')
+upload_('dollar.csv', 'clouds-lab4')
 
 
 s3 = boto3.resource('s3')
 # choose which file to read
-obj = s3.Object('kpi-lab4', "euro.csv")
-obj1 = s3.Object('kpi-lab4', "dollar.csv")
+obj = s3.Object('clouds-lab4', "euro.csv")
+obj1 = s3.Object('clouds-lab4', "dollar.csv")
 # get only the body of the object
 body = obj.get()['Body'].read()
 body1 = obj1.get()['Body'].read()
